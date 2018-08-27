@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour {
         newPedestrian.GetComponentInChildren<PedestrianController>().gameManager = this;
         */
 
-        InvokeRepeating("SpawnPedestrian", 1f, 10f);
+        InvokeRepeating("SpawnPedestrian", 1f, 15f);
 	}
 	
 	// Update is called once per frame

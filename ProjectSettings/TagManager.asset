@@ -12,6 +12,7 @@ TagManager:
   - DangerNE
   - DangerSW
   - DangerSE
+  - GameManager
   layers:
   - Default
   - TransparentFX

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PedestrianController : MonoBehaviour {
 
+    public ScoreManager scoreManager;
     public GameManager gameManager;
     public PlayerController player;
     public List<Transform> positions = new List<Transform>();
@@ -13,10 +14,10 @@ public class PedestrianController : MonoBehaviour {
     public float moveDelay = 1f;
     float lastMoveTime;
 
-    private int count;
-
 	// Use this for initialization
 	void Start () {
+
+        scoreManager = GameObject.FindWithTag("GameManager").GetComponent<ScoreManager>();
         transform.position = positions[currentPosition].transform.position;
         lastMoveTime = Time.time;
 
@@ -42,8 +43,11 @@ public class PedestrianController : MonoBehaviour {
         currentPosition++;
 
         if (currentPosition >= positions.Count)
-            currentPosition = 0;
-
+        {
+        currentPosition = 0;
+        GetComponent<PedestrianController>().gameObject.SetActive(false);
+        }
+            
         transform.position = positions[currentPosition].transform.position;
 
         lastMoveTime = Time.time;
@@ -64,8 +68,7 @@ public class PedestrianController : MonoBehaviour {
             || currentPosition == 14 && playerCurrentPosition == 2
             || currentPosition == 17 && playerCurrentPosition == 3)
         {
-            count++;
-            Debug.Log("Count: " + count.ToString());
+            scoreManager.IncreaseScore();
         }
     }
 }
