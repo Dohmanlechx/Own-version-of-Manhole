@@ -987,6 +987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ac0578c508ade48b520d4e9b370457, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreManager: {fileID: 0}
   gameManager: {fileID: 0}
   player: {fileID: 0}
   positions:
@@ -1013,7 +1014,7 @@ MonoBehaviour:
   - {fileID: 4090499391324842}
   - {fileID: 4744207211461856}
   currentPosition: 0
-  moveDelay: 0.85
+  moveDelay: 1
 --- !u!212 &212129576128026006
 SpriteRenderer:
   m_ObjectHideFlags: 1
