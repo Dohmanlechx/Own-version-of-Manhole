@@ -12,15 +12,24 @@ public class GameManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        
         newPlayer = Instantiate(playerPrefab);
         newPlayer.GetComponentInChildren<PlayerController>().gameManager = this;
-
+        /*
         newPedestrian = Instantiate(pedestrianPrefab);
         newPedestrian.GetComponentInChildren<PedestrianController>().gameManager = this;
+        */
+
+        InvokeRepeating("SpawnPedestrian", 1f, 10f);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
+    }
+
+    void SpawnPedestrian()
+    {
+        GameObject.Instantiate(pedestrianPrefab);
     }
 }

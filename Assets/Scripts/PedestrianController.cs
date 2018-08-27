@@ -10,7 +10,7 @@ public class PedestrianController : MonoBehaviour {
     public List<Transform> positions = new List<Transform>();
     public int currentPosition = 0;
     public static int playerCurrentPosition;
-    public float moveDelay = 1.0f;
+    public float moveDelay = 1f;
     float lastMoveTime;
 
     private int count;
@@ -57,6 +57,7 @@ public class PedestrianController : MonoBehaviour {
             // Game Over trigger
             Debug.Log("GAME OVER!");
             StopAllCoroutines();
+            Time.timeScale = 0;
         }
         else if (currentPosition == 4 && playerCurrentPosition == 0
             || currentPosition == 7 && playerCurrentPosition == 1
