@@ -1014,6 +1014,8 @@ MonoBehaviour:
   - {fileID: 4744207211461856}
   currentPosition: 0
   moveDelay: 1
+  countText: {fileID: 114125881508788064, guid: 7e1e01158e1723e479bc61daeb505ef5,
+    type: 2}
 --- !u!212 &212129576128026006
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
@@ -16,7 +17,6 @@ public class GameManager : MonoBehaviour {
 
         newPedestrian = Instantiate(pedestrianPrefab);
         newPedestrian.GetComponentInChildren<PedestrianController>().gameManager = this;
-
 	}
 	
 	// Update is called once per frame

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PedestrianController : MonoBehaviour {
 
@@ -11,6 +12,8 @@ public class PedestrianController : MonoBehaviour {
     public static int playerCurrentPosition;
     public float moveDelay = 1.0f;
     float lastMoveTime;
+
+    private int count;
 
 	// Use this for initialization
 	void Start () {
@@ -53,6 +56,15 @@ public class PedestrianController : MonoBehaviour {
         {
             // Game Over trigger
             Debug.Log("GAME OVER!");
+            StopAllCoroutines();
+        }
+        else if (currentPosition == 4 && playerCurrentPosition == 0
+            || currentPosition == 7 && playerCurrentPosition == 1
+            || currentPosition == 14 && playerCurrentPosition == 2
+            || currentPosition == 17 && playerCurrentPosition == 3)
+        {
+            count++;
+            Debug.Log("Count: " + count.ToString());
         }
     }
 }
