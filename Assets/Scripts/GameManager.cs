@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+
+        score = 0;
         
         newPlayer = Instantiate(playerPrefab);
         newPlayer.GetComponentInChildren<PlayerController>().gameManager = this;

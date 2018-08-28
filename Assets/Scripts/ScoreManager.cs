@@ -5,14 +5,19 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour {
 
-    //public Text scoreText;
+    public Text countText;
 
     public static int score;
+
+    private void Start()
+    {
+        countText.text = "Count: " + score.ToString();
+    }
 
     public void IncreaseScore()
     {
         score++;
         Debug.Log("Score: " + score.ToString());
-        //scoreText.text = score.ToString();
+        countText.text = "Count: " + score.ToString();
     }
 }
