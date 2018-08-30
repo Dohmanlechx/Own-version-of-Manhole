@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -27,6 +28,7 @@ public class GameManager : MonoBehaviour {
 
         // Creating first "wave" of pedestrians
         InvokeRepeating("SpawnPedestrian", 1.5f, 30f);
+
 	}
 	
 	// Update is called once per frame
@@ -39,28 +41,24 @@ public class GameManager : MonoBehaviour {
         {
             level1 = true;
             CancelInvoke();
-            Debug.Log("Faster spawns activated");
             InvokeRepeating("SpawnPedestrian", 3.5f, 12f);
         }
         else if (score >= 11 && !level2)
         {
             level2 = true;
             CancelInvoke();
-            Debug.Log("Faster spawns activated");
             InvokeRepeating("SpawnPedestrian", 3f, 8.5f);
         }
         else if (score >= 22 && !level3)
         {
             level3 = true;
             CancelInvoke();
-            Debug.Log("Faster spawns activated");
             InvokeRepeating("SpawnPedestrian", 3.5f, 6f);
         }
         else if (score >= 33 && !levelmax)
         {
             levelmax = true;
             CancelInvoke();
-            Debug.Log("Faster spawns activated");
             InvokeRepeating("SpawnPedestrian", 3f, 4.5f);
         }
     }
@@ -74,9 +72,7 @@ public class GameManager : MonoBehaviour {
     {
         Time.timeScale = 1;
 
-        // denna kod tar bara bort den "aktuella" gubben när koden
-        // körs, inte alla gubbar som jag vill. något tips?
-        newPedestrian.SetActive(false);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
         ScoreManager.score = 0;
         scoreManager.SetText();
