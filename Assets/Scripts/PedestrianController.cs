@@ -14,7 +14,6 @@ public class PedestrianController : MonoBehaviour {
     public static int playerCurrentPosition;
     public float moveDelay = 1f;
     public static int score;
-    float lastMoveTime;
 
     bool gameOver = false;
 
@@ -23,7 +22,6 @@ public class PedestrianController : MonoBehaviour {
 
         scoreManager = GameObject.FindWithTag("GameManager").GetComponent<ScoreManager>();
         transform.position = positions[currentPosition].transform.position;
-        lastMoveTime = Time.time;
 
         score = ScoreManager.score;
 
@@ -55,8 +53,6 @@ public class PedestrianController : MonoBehaviour {
         }
             
         transform.position = positions[currentPosition].transform.position;
-
-        lastMoveTime = Time.time;
 
         // Checking if pedestrian is standing on the plank (player)
         if (currentPosition == 4 && playerCurrentPosition != 0
