@@ -16,6 +16,8 @@ public class PedestrianController : MonoBehaviour {
     public static int score;
     float lastMoveTime;
 
+    bool gameOver = false;
+
 	// Use this for initialization
 	void Start () {
 
@@ -35,7 +37,7 @@ public class PedestrianController : MonoBehaviour {
 
     IEnumerator Move()
     {
-        while (true)
+        while (!gameOver)
         {
             yield return new WaitForSeconds(moveDelay);
             MoveToNextPosition();
@@ -76,6 +78,15 @@ public class PedestrianController : MonoBehaviour {
 
     void GameOver()
     {
+        gameOver = true;
+
+        /*
+        for (int i = 0; i < positions.Count; i++)
+        {
+            positions[i].gameObject.SetActive(false);
+        }
+        */
+
         scoreManager.countText.text = "Game over! Your score: " + score.ToString();
         StopAllCoroutines();
         Time.timeScale = 0;

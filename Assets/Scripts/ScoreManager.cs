@@ -11,13 +11,18 @@ public class ScoreManager : MonoBehaviour {
 
     private void Start()
     {
-        countText.text = "Count: " + score.ToString();
+        SetText();
     }
 
     public int IncreaseScore()
     {
         score++;
-        countText.text = "Count: " + score.ToString();
+        SetText();
         return score;
+    }
+
+    public void SetText()
+    {
+        countText.text = "Count: " + score.ToString();
     }
 }

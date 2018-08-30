@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
+    public ScoreManager scoreManager;
+
     public GameObject playerPrefab;
     public GameObject pedestrianPrefab;
     GameObject newPlayer;
@@ -65,6 +67,19 @@ public class GameManager : MonoBehaviour {
 
     void SpawnPedestrian()
     {
-        GameObject.Instantiate(pedestrianPrefab);
+        newPedestrian = Instantiate(pedestrianPrefab);
+    }
+
+    public void RestartGame()
+    {
+        Time.timeScale = 1;
+
+        // denna kod tar bara bort den "aktuella" gubben när koden
+        // körs, inte alla gubbar som jag vill. något tips?
+        newPedestrian.SetActive(false);
+
+        ScoreManager.score = 0;
+        scoreManager.SetText();
+        Start();
     }
 }
