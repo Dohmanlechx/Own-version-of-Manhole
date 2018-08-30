@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour {
     GameObject newPlayer;
     GameObject newPedestrian;
 
-    bool over4, over12, over20, over28 = false;
+    bool level1, level2, level3, levelmax = false;
 
     public static int score;
 
@@ -19,13 +19,11 @@ public class GameManager : MonoBehaviour {
 
         score = 0;
         
+        // Creating player
         newPlayer = Instantiate(playerPrefab);
         newPlayer.GetComponentInChildren<PlayerController>().gameManager = this;
-        /*
-        newPedestrian = Instantiate(pedestrianPrefab);
-        newPedestrian.GetComponentInChildren<PedestrianController>().gameManager = this;
-        */
 
+        // Creating first "wave" of pedestrians
         InvokeRepeating("SpawnPedestrian", 1.5f, 30f);
 	}
 	
@@ -34,30 +32,31 @@ public class GameManager : MonoBehaviour {
         
         score = ScoreManager.score;
 
-        if (score >= 3 && !over4)
+        // More pedestrians spawning while points get higher
+        if (score >= 3 && !level1)
         {
-            over4 = true;
+            level1 = true;
             CancelInvoke();
             Debug.Log("Faster spawns activated");
             InvokeRepeating("SpawnPedestrian", 3.5f, 12f);
         }
-        else if (score >= 11 && !over12)
+        else if (score >= 11 && !level2)
         {
-            over12 = true;
+            level2 = true;
             CancelInvoke();
             Debug.Log("Faster spawns activated");
             InvokeRepeating("SpawnPedestrian", 3f, 8.5f);
         }
-        else if (score >= 22 && !over20)
+        else if (score >= 22 && !level3)
         {
-            over20 = true;
+            level3 = true;
             CancelInvoke();
             Debug.Log("Faster spawns activated");
             InvokeRepeating("SpawnPedestrian", 3.5f, 6f);
         }
-        else if (score >= 33 && !over28)
+        else if (score >= 33 && !levelmax)
         {
-            over28 = true;
+            levelmax = true;
             CancelInvoke();
             Debug.Log("Faster spawns activated");
             InvokeRepeating("SpawnPedestrian", 3f, 4.5f);

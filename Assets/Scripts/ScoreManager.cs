@@ -14,10 +14,10 @@ public class ScoreManager : MonoBehaviour {
         countText.text = "Count: " + score.ToString();
     }
 
-    public void IncreaseScore()
+    public int IncreaseScore()
     {
         score++;
-        Debug.Log("Score: " + score.ToString());
         countText.text = "Count: " + score.ToString();
+        return score;
     }
 }

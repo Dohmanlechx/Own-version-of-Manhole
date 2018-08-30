@@ -158,6 +158,111 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 212540511565860808, guid: 207f6a5ae4d53014e867056381ae3be6,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212540511565860808, guid: 207f6a5ae4d53014e867056381ae3be6,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212540511565860808, guid: 207f6a5ae4d53014e867056381ae3be6,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212345784764604386, guid: 207f6a5ae4d53014e867056381ae3be6,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212345784764604386, guid: 207f6a5ae4d53014e867056381ae3be6,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212345784764604386, guid: 207f6a5ae4d53014e867056381ae3be6,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212853586917534172, guid: 207f6a5ae4d53014e867056381ae3be6,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212853586917534172, guid: 207f6a5ae4d53014e867056381ae3be6,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212853586917534172, guid: 207f6a5ae4d53014e867056381ae3be6,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212154957971515994, guid: 207f6a5ae4d53014e867056381ae3be6,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212154957971515994, guid: 207f6a5ae4d53014e867056381ae3be6,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212154957971515994, guid: 207f6a5ae4d53014e867056381ae3be6,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212375212564023792, guid: 207f6a5ae4d53014e867056381ae3be6,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212375212564023792, guid: 207f6a5ae4d53014e867056381ae3be6,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212375212564023792, guid: 207f6a5ae4d53014e867056381ae3be6,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212164964936374296, guid: 207f6a5ae4d53014e867056381ae3be6,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212164964936374296, guid: 207f6a5ae4d53014e867056381ae3be6,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212164964936374296, guid: 207f6a5ae4d53014e867056381ae3be6,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224283081123821424, guid: 207f6a5ae4d53014e867056381ae3be6,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -667.00006
+      objectReference: {fileID: 0}
+    - target: {fileID: 224283081123821424, guid: 207f6a5ae4d53014e867056381ae3be6,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 1334
+      objectReference: {fileID: 0}
+    - target: {fileID: 224283081123821424, guid: 207f6a5ae4d53014e867056381ae3be6,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -53.399994
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 207f6a5ae4d53014e867056381ae3be6, type: 2}
   m_IsPrefabAsset: 0

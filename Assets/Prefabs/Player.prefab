@@ -255,6 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad784a8fbfcdd5444bb0aabb416a8975, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   positions:
   - {fileID: 4942261470081534}
   - {fileID: 4304108737958384}
@@ -296,7 +297,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 83829f0742001a74fa2f7a951eb2f74f, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.754717, g: 0, b: 0.06501216, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
